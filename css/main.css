@@ -1,0 +1,162 @@
+main .section-thanhks button, main .section-down form .button, main .section-thanhks form .button {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  background-color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .section-thanhks button:hover, main .section-down form .button:hover, main .section-thanhks form .button:hover, main .section-thanhks button:active, main .section-down form .button:active, main .section-thanhks form .button:active {
+  background-image: linear-gradient(90deg, #ff5478, hsl(4, 100%, 67%));
+}
+
+main .section-thanhks .ico-big, main .section-down .characteristics div .check, main .section-thanhks .characteristics div .check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/images/icon-list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 10px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: hsl(234, 29%, 20%);
+}
+
+main {
+  margin: auto;
+  max-width: 375px;
+}
+main .section-image--up picture img {
+  width: 100%;
+  height: 290px;
+}
+main .section-down, main .section-thanhks {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .section-down h1, main .section-thanhks h1 {
+  font-size: 3rem;
+}
+main .section-down .characteristics, main .section-thanhks .characteristics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+main .section-down .characteristics div, main .section-thanhks .characteristics div {
+  display: flex;
+  line-height: 20px;
+}
+main .section-down form, main .section-thanhks form {
+  width: 100%;
+}
+main .section-down form label, main .section-thanhks form label {
+  font-weight: 700;
+}
+main .section-down form label .error, main .section-thanhks form label .error {
+  color: hsl(4, 100%, 67%);
+  margin-left: 70px;
+  font-weight: 500;
+}
+main .section-down form label .input-error, main .section-thanhks form label .input-error {
+  border: 1px solid hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.1);
+  color: hsl(4, 100%, 67%);
+}
+main .section-down form label .input-error::-moz-placeholder, main .section-thanhks form label .input-error::-moz-placeholder {
+  color: hsl(4, 100%, 67%);
+}
+main .section-down form label .input-error::placeholder, main .section-thanhks form label .input-error::placeholder {
+  color: hsl(4, 100%, 67%);
+}
+main .section-down form input, main .section-thanhks form input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+main .section-thanhks {
+  height: 100vh;
+  justify-content: space-between;
+}
+main .section-thanhks .ico-big {
+  width: 60px;
+  height: 60px;
+  margin-top: 70px;
+}
+main .section-thanhks h2 {
+  font-size: 4rem;
+  line-height: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+main .section-thanhks p {
+  line-height: 25px;
+}
+main .section-thanhks p span {
+  font-weight: 700;
+}
+@media (min-width: 1440px) {
+  body {
+    background-color: hsl(235, 18%, 26%);
+    display: flex;
+  }
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    max-width: none;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+  }
+  main .section-image--up {
+    width: 350px;
+    height: 100%;
+  }
+  main .section-image--up picture img {
+    width: 100%;
+    height: 50%;
+  }
+  main .section-down, main .section-thanhks {
+    min-width: none;
+    width: 400px;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+  main .section-down h1, main .section-thanhks h1 {
+    font-size: 4rem;
+  }
+  main .section-thanhks {
+    height: auto;
+  }
+  main .section-thanhks .ico-big {
+    margin: 0px;
+  }
+}/*# sourceMappingURL=main.css.map */

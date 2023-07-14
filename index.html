@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsletter</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="section-image--up">
+            <picture>
+                <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1440px)" />
+                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+            </picture>
+        </section>
+        <section class="section-down">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <div class="characteristics">
+                <div><span class="check"></span><p>Product discuvery and building what matters</p></div>
+                <div><span class="check"></span><p>Measuring to ensure updates are a success</p></div>
+                <div><span class="check"></span><p>And much more!</p></div>
+            </div>
+            <form action="#">
+                <label for=""> Email address <span class="span-error"></span><br>
+                    <input id="input_email"  type="email" placeholder="email@company.com">
+                </label>
+                <button id="butSend" class="button">Suscribe to monthly newsletter</button>
+            </form>
+        </section>
+        <section class="section-thanhks">
+            <div>
+                <span class="ico-big"></span>
+            <h2>Thaks for subscribing!</h2>
+            <p>A confirmation email has been sent to <span id="spanEmail"></span>. Please open it and click the button inside to confirm your subscription</p>
+            </div>
+            <button> Dismiss message</button>
+
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

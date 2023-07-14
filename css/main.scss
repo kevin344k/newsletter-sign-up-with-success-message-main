@@ -1,0 +1,243 @@
+//## Colors
+
+//### Primary
+
+$Tomato: hsl(4, 100%, 67%);
+
+//### Neutral
+
+$Dark_Slate_Grey: hsl(234, 29%, 20%);
+$Charcoal_Grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+
+//## Typography
+
+//### Body Copy
+
+$Font_size_paragraph: 1.6rem;
+
+
+%button {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    background-color: $Dark_Slate_Grey;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        background-image: linear-gradient(90deg, #ff5478, hsl(4, 100%, 67%));
+    }
+}
+
+%img-ico {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/images/icon-list.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: $Font_size_paragraph;
+    color: $Dark_Slate_Grey;
+}
+
+main {
+    margin: auto;
+    max-width: 375px;
+
+    .section-image--up {
+
+        picture {
+            img {
+                width: 100%;
+                height: 290px;
+            }
+
+        }
+    }
+
+    .section-down {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        .characteristics {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            div {
+                display: flex;
+                line-height: 20px;
+
+                .check {
+                    @extend %img-ico;
+                }
+            }
+        }
+
+        form {
+            width: 100%;
+
+            label {
+                font-weight: 700;
+
+                .error {
+                    color: $Tomato;
+                    margin-left: 70px;
+                    font-weight: 500;
+                }
+
+                .input-error {
+                    border: 1px solid $Tomato;
+                    background-color: hsla(4, 100%, 67%, .1);
+                    color: $Tomato;
+
+                    &::placeholder {
+                        color: $Tomato;
+
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                padding: 13px;
+                border-radius: 10px;
+                outline: none;
+                border: 1px solid $Grey;
+                margin-top: 10px;
+                margin-bottom: 25px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.8rem;
+                cursor: pointer;
+            }
+
+            .button {
+                @extend %button;
+            }
+        }
+    }
+
+    .section-thanhks {
+        @extend .section-down;
+        height: 100vh;
+        justify-content: space-between;
+
+        .ico-big {
+            @extend %img-ico;
+            width: 60px;
+            height: 60px;
+            margin-top: 70px;
+
+        }
+
+        h2 {
+            font-size: 4rem;
+            line-height: 35px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            line-height: 25px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        button {
+            @extend %button;
+
+
+
+        }
+    }
+
+
+
+
+}
+
+@media(min-width:1440px) {
+    body {
+        background-color: $Charcoal_Grey;
+        display: flex;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        max-width: none;
+       
+        padding: 20px;
+
+        background-color: $White;
+        border-radius: 20px;
+
+        .section-image--up {
+            width: 350px;
+            height: 100%;
+
+            picture {
+
+                img {
+                    width: 100%;
+                    height: 50%;
+                }
+
+            }
+
+        }
+
+        .section-down {
+            min-width: none;
+            width: 400px;
+            justify-content: center;
+          font-size: 1.3rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+
+
+        }
+        .section-thanhks{
+            height: auto;
+           .ico-big{
+            margin: 0px;
+           }
+            
+        }
+    }
+}
